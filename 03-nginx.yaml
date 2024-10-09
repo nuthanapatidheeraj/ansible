@@ -1,7 +1,7 @@
 - name: niginx and run
   hosts: web
   become: yes #take sudo access
-  taks:
+  tasks:
   -name: install nginx
   ansible.builtin.package: #heterogenous module that can work for all distibutions(it runs DNF in backgrpoound with out providing dnf)
     name: nginx
