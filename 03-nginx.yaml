@@ -2,8 +2,8 @@
   hosts: web
   become: yes #take sudo access
   tasks:
-  -name: install nginx
-  ansible.builtin.package: #heterogenous module that can work for all distibutions(it runs DNF in backgrpoound with out providing dnf)
-    name: nginx
-    state: present
+  - name: install nginx
+    ansible.builtin.package: #heterogenous module that can work for all distibutions(it runs DNF in backgrpoound with out providing dnf)
+     name: nginx
+     state: present
 
