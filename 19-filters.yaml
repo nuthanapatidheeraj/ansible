@@ -25,4 +25,13 @@
     ansible.builtin.debug:
       msg: "{{ numbers | unique }}"  
 
+  - name: convert map to list
+    vars:
+      course:
+        name: "DevOps with AWS"
+        duration: 120
+        trainer: "Youtube"
+    ansible.builtin.debug:
+      msg: "{{ course | dusct2items }}"      
+
           
