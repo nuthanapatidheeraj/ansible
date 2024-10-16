@@ -1,12 +1,6 @@
 - name: command vs shell
   hosts: web
-  become: yes
   connection: local
   tasks:
   - name: execute the command
-    ansible.builtin.shell: ls- ltr > /tmp/output.txt #login into serrver and execute the command
-    # command module,just issues the command ,idf we use ansible.builtin.command we will get an error'
-
-  # - name: check the process
-  #   ansible.builtin.command: ps -ef | grep ssh
-  #   register: output
+    ansible.builtin.shell: ls- ltr > /tmp/output.txt
