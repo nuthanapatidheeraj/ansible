@@ -1,5 +1,5 @@
 - name: command vs shell
-  become:yes
+  become: yes
   hosts: local
   connection: local
   tasks:
