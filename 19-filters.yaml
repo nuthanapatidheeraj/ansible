@@ -32,6 +32,6 @@
         duration: 120
         trainer: "Youtube"
     ansible.builtin.debug:
-      msg: "{{ course | dusct2items }}"      
+      msg: "{{ course | dict2items }}"      
 
           
