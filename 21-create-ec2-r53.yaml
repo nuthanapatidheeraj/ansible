@@ -1,8 +1,8 @@
-- name: create ec2-r53 records
+- name: create ec2 and r53 records
   hosts: local
   connection: local
   vars:
-    subnet_id: subnet-0f4df3d6238ea7084 #myinstance subnet ID
+    subnet_id: "subnet-0f4df3d6238ea7084" #myinstance subnet ID
     sg_id: "sg-019a05797fbedc0b4"
     ami_id: "ami-09c813fb71547fc4f"
     instances:
@@ -25,7 +25,7 @@
     ansible.builtin.debug:
       msg: "{{ ec2_instances }}"  
 
-  - name: create r53 records
+  - name: create r53 records #private ip R53
     amazon.aws.route53:
       state: present
       zone: "{{ zone }}"  
